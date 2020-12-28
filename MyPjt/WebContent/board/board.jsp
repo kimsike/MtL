@@ -231,8 +231,7 @@
 						<%
 									String file = boardBean.getFile();			
 									
-									if(file != null	){
-										
+									if(file != null	){			
 						%>				
 									<img src="../images/floppy_disk.png" width="25" height="25">	
 						<% 			

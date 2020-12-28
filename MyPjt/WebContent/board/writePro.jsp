@@ -31,9 +31,7 @@
 	
 	try {
 		
-		MultipartRequest multi = 
-		        new MultipartRequest(request, savePath, sizeLimit, "utf-8",
-									 new DefaultFileRenamePolicy());
+		MultipartRequest multi = new MultipartRequest(request, savePath, sizeLimit, "utf-8", new DefaultFileRenamePolicy());
 		Enumeration formNames = multi.getFileNames(); // 폼의 이름 반환
 		 
 		String formName = (String) formNames.nextElement(); // 자료가 많을 경우엔 while 문을 사용

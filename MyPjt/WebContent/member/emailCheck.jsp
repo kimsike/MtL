@@ -18,19 +18,11 @@ if(!email1.equals("")){
 // 위에서 작성한 java파일 객체 생성
 EmailConfirm emailconfirm = new EmailConfirm();
 String authNum=emailconfirm.connectEmail(email);
-
+%>
+<script>
+alter("인증번호가 발송되었습니다.");
+</script>
+<%
+response.sendRedirect("email.jsp?authNum="+authNum);
 %>
 
-<form action="email.jsp?email1=<%=email1%>&email2=<%=email1%>&email3=<%=email1%>" method="post" name="emailcheck">
-<input type="hidden" name="authNum" value="<%=authNum%>">
-	<table>
-		<tr>
-			<th colspan="2">인증번호가 발송되었습니다.</th>
-		</tr>
-		<tr>
-			<td>
-				<input type="submit" value="확인">
-			</td>
-		</tr>
-	</table>
-</form>

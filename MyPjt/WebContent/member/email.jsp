@@ -80,7 +80,7 @@
 		var url="emailCheck.jsp?email1="+email1+"&email2="+email2+"&email3="+email3;
 	
 		// 인증을 위해 새창으로 이동
-		open(url,"emailwindow", "statusbar=no, scrollbar=no, menubar=no, width=400, height=200" ); 
+		//open(url,"emailwindow", "statusbar=no, scrollbar=no, menubar=no, width=400, height=200" ); 
 		location.href=url; 
 	}
 	
@@ -101,7 +101,10 @@
 </script>
 </head>
 	<%
-
+		String authNum = request.getParameter("authNum");
+		if(authNum != null || authNum != "" ){
+			authNum = authNum;
+		}
 	%>
 
 <body>
